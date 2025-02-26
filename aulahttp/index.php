@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste HTTP</title>
+    <title>calculadora</title>
 </head>
-<!-- html 5 -->
 <body>
-     <!-- echo "Meu nome é ", $_GET["nome"], " e tenho ", $_GET["idade"], "!"; -->
-   <?php
+    <form method="post" action="calcular.php">
+    <p>
+        <label for="num1">número 1 </label>
+        <input type="number" id="num1" name="num1">
+</p>
+    <p>
+        <label for="num2">número 2 </label>
+        <input type="number" id="num2" name="num2">
+</p>
+    <p>
+    <label for="ope">Operação</label>
+    <select id="ope" name="ope">
+        <option value=" ">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+</p>
+    <p>
+        <button type="submit">calcular</button>
+</p>
    
-  $num1 = $_GET["num1"];
-  $num2 = $_GET["num2"];
-  $ope = $_GET["ope"];
-
-  if ($ope == " ") {
-    $soma = $num1 + $num2;
-    echo "A soma é ", $soma;
-  } else if ($ope == "-") {
-    $sub = $num1 - $num2;
-    echo "A subtração é ", $sub;
-  } else if ($ope == "*") {
-   $multi = $num1 * $num2;
-   echo "A multiplicação é ", $multi;
-  } else {
-    $div = $num1 / $num2;
-    echo "A divisão é ", $div;
-  }
-
-
-   ?>
+    </form>
 </body>
 </html>
